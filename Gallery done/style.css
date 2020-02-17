@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,500,500i,600,600i,700&display=swap');
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Muli', san-serif;
+	box-sizing: border-box;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.header {
+	text-align: center;
+	padding: 2rem 0;
+}
+
+.header p {
+	font-size: 1.2rem;
+}
+
+.image-grid {
+	column-count: 4;
+	transition: 1s;
+}
+
+img {
+	width: 100%;
+	margin: .5rem;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.box {
+	width: 20%;
+	background: #333;
+	color: #fff;
+	padding: 2rem;
+	text-align: center;
+	position: relative;
+}
+
+.box:after {
+	content: '';
+	position: absolute;
+	right: -4%;
+	bottom: -4%;
+	height: 90%;
+	width: 90%;
+	background: transparent;
+	z-index: -1;
+	border-right: 15px solid #E14929;
+	border-bottom: 15px solid #E14929;
+	border-top: 15px solid transparent;
+	border-left: 15px solid transparent;
+}
+
+.box span {
+	font-size: 4rem;
+	color: #F26C4F;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	.box {
+		flex-basis: 45%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.image-grid {
+		column-count: 3;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.image-grid {
+		column-count: 2;
+	}
+}
+
+@media only screen and (max-width: 350px) {
+	.image-grid {
+		column-count: 1;
+	}
+}

@@ -1,0 +1,43 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+	box-sizing: border-box;
+}
+
+body {
+	background: #fff;
+	font-family: Trebuchet Ms;
+}
+
+header {
+	text-align: center;
+	margin-bottom: 2rem;
+	margin-top: 2rem;
+}
+
+.container {
+	width: 80%;
+	column-count: 4;
+	margin: 0 auto;
+}
+
+.grid-item img {
+	width: 100%;
+	height: auto;
+	margin: 1em;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.container {
+		column-count: 3;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.container {
+		column-count: 2;
+	}
+}
