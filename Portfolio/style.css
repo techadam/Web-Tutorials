@@ -68,6 +68,30 @@ img {
 	color: #F26C4F;
 }
 
+.card {
+	padding: 2rem;
+	width: 300px;
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+	margin-top: 30px;
+	/*transform: rotateY(0deg);*/
+	transition: all 1s;
+	position: relative;
+
+}
+
+.card:hover {
+	/*transform: rotateY(90deg);*/
+	box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+	background-image: url('./img/4.jpg');
+	-webkit-background-clip: text;
+	color: transparent;
+	font-size: 4rem;
+	background-position: 70% 90%;
+}
+
 
 @media only screen and (max-width: 1000px) {
 	.box {
