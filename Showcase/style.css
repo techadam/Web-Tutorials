@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: 'Roboto', san-serif;
+}
+
+body {
+	background: #F7DAD8;
+}
+
+.step {
+	width: 700px;
+	height: 600px;
+	position: relative;
+	margin: auto;
+	transition: 1s opacity;
+	-moz-transition: 1s opacity;
+	-webit-transition: 1s opacity;
+}
+
+.flex {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex h1 {
+	margin-bottom: 1rem;
+	font-size: 3rem;
+}
+
+.flex p, .slide p {
+	font-size: 1.6rem;
+	line-height: 2.5rem;
+}
+
+.info {
+	padding: 0rem 2.3rem;
+}
+
+.slide {
+	text-align: center;
+}
+
+.slide h1 {
+	margin-bottom: 1rem;
+	font-size: 3rem
+}
+
+.slide .info p {
+	margin-bottom: 2rem;
+}
+
+.slide img {
+	margin-bottom: 1.8rem;
+}
+
+.control-btn {
+	position: fixed;
+	top: 45%;
+	left: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding: 0rem 2rem;
+}
+
+button {
+	background: none;
+	border: none;
+	font-size: 3rem;
+}
+
+.step:nth-child(3) img,
+.step:nth-child(4) h1 {
+	margin-top: 3.8rem;
+}

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap');
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap');*/
+
+:root {
+	--fontFamily: 'Nunito', sans-serif;
+}
+
+* {
+	text-decoration: none;
+	list-style-type: none;
+	font-family: HK Grotesk Regular, san-serif;
+}
+
+.bg-dark-one {
+	background: #222222;
+	color: white;
+}
+
+.bg-darker {
+	background: #1F1F1F;
+	color: #fff;
+}
+
+.bg-accent-one {
+	background: #F26C4F;
+	color: white;
+}
+
+.text-accent {
+	color: #F26C4F;
+}
+
+.text-accent-dark {
+	color: #E84A2C;
+}
+
+.btn-accent,
+.btn-accent:hover {
+	background: #F26C4F;
+	color: #fff;
+}
+
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-menu li {
+	display: inline-block;
+	margin: 1rem;
+}
+
+.nav-menu li a {
+	color: #fff;
+}
+
+.nav-menu li a.active {
+	color: #F26C4F;
+}
+
+.nav-icons li {
+	display: inline-block;
+	margin: 1rem;
+}
+
+.nav-icons:last-child {
+	margin-right: 0;
+}
+
+.nav-icons li a {
+	color: #fff;
+}
+
+.hero {
+	min-height: 75vh;
+	background-image: url('../../img/hero-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top;
+	/*animation: animate-bg 5s linear infinite alternate;*/
+}
+
+@keyframes animate-bg {
+	from {background-position: top}
+	to {background-position: bottom}
+}
+
+.hero-desc h1 {
+	font-size: 3.5rem;
+	margin-bottom: 1.2rem;
+	font-weight: 300;
+}
+
+.experience {
+	display: flex;
+	align-items: center;
+}
+
+.experience h1 {
+	font-weight: 700;
+}
+
+.my-card {
+	position: relative;
+}
+
+.my-card.active .bg,
+.my-card:hover .bg {
+	position: absolute;
+	bottom: 7%;
+	right: 2%;
+	height: 80%;
+	width: 80%;
+	background-image: linear-gradient(50deg, #8A2BE2, #E84A2C);
+	z-index: 0;
+}
+
+.my-card:hover .service-card {
+	background: #1F1F1F;
+}
+
+.service-card {
+	margin-bottom: 2rem;
+	position: relative;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.service-card.active:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	right: -10%;
+	bottom: 10%;
+	background: red;
+	z-index: -1;
+}
+
+.experience h1 {
+	font-size: 4rem;
+}
+
+.service-card span {
+	font-size: 3.5rem;
+	margin-bottom: 1rem;
+}
+
+.service-card p {
+	line-height: 30px;
+}
+
+.gallery {
+	display: grid;
+	grid-template-rows: repeat(2, 250px);
+	grid-template-columns: repeat(5, 1fr);
+	grid-gap: 1px;
+}
+
+.grid-item {
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.grid-item a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	background: rgba(0,0,0,0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	transition: all 1s;
+}
+
+.grid-item span {
+	font-size: 4rem;
+}
+
+.grid-item a:hover {
+	background: rgba(0,0,0,0.8);
+}
+
+.slide-info {
+	background-image: url('../../img/slider-bg.png');
+}
+
+.slide-info h3 {
+	line-height: 2.8rem;
+}
+
+.slide-info h4 {
+	font-weight: bold;
+}
+
+.slide-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.brands {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr)
+}
+
+.single-news {
+	box-shadow: 0px 0px 7px 0px #363636;
+}
+
+.news-img {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 200px;
+	background-position: center;
+}
+
+.news-info {
+	padding: 1.3rem;
+}
+
+.news-info h6 {
+	font-weight: bold;
+}
+

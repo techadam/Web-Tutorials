@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Product showcase</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div id="impress">
+		
+		<div class="step" data-x="0" data-y="0">
+			<div class="flex">
+				<div class="info">
+					<h1>Nokia 5.1</h1>
+					<p>Lorem ipsum is a dummy text placeholder, Lorem ipsum is a dummy text placeholder</p>
+				</div>
+
+				<div class="image">
+					<img src="2.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="step" data-x="1100" data-y="1200" data-scale="1.8" data-rotate="190">
+			<div class="flex">
+				<div class="image">
+					<img src="1.png" alt="">
+				</div>
+				<div class="info">
+					<h1>Amazing Features</h1>
+					<p>Lorem ipsum is a dummy text placeholder, Lorem ipsum is a dummy text placeholder</p>
+				</div>
+			</div>
+		</div>
+		<div class="step" data-x="-3000" data-y="600" data-scale="0.2" data-rotate="270">
+			<div class="slide">
+				<div class="image">
+					<img src="3.png" alt="">
+				</div>
+				<div class="info">
+					<h1>Awesome Selfie Camera</h1>
+					<p>Lorem ipsum is a dummy text placeholder, Lorem ipsum is a dummy text placeholder</p>
+				</div>
+			</div>
+		</div>
+		<div class="step" data-x="-200" data-y="1500" data-rotate="180">
+			<div class="slide">
+				<div class="info">
+					<h1>Nokia 5.1</h1>
+					<p>Lorem ipsum is a dummy text placeholder, Lorem ipsum is a dummy text placeholder</p>
+				</div>
+				<div class="image">
+					<img src="3.png" alt="">
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="control-btn">
+		<div><button id="arrowLeft"><span class="ti-angle-left"></span></button></div>
+		<div><button id="arrowRight"><span class="ti-angle-right"></span></button></div>
+	</div>
+	
+
+	<script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="impress.js"></script>
+	<script>
+		$(function() {
+			let imp = impress();
+
+			$("#arrowLeft").click(function(e) {
+				imp.prev();
+				e.preventDefault();
+			});
+
+			$("#arrowRight").click(function(e) {
+				imp.next();
+				e.preventDefault();
+			});
+		});
+	</script>
+</body>
+</html>

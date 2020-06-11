@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+	list-style-type: none;
+}
+
+.sidebar {
+	width: 40px;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #11397e;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header {
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .7rem 2rem;
+	height: 60px;
+}
+
+.brand {
+	display: flex;
+	align-items: center;
+}
+
+.brand img {
+	width: 20px;
+	height: 30px;
+	margin-right: .5rem;
+}
+
+.nav-menu li {
+	display: inline-block;
+	margin: 0rem 1rem;
+}
+
+.nav-menu a {
+	color: #333;
+	text-transform: uppercase;
+	font-size: .8rem;
+	font-weight: 700;
+}
+
+.user img {
+	border-radius: 50%;
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.3);
+}
+
+.main {
+	margin-left: 40px;
+	min-height: 100vh;
+}
+
+.content-1, .content-2 {
+	padding: 1rem 2rem;
+}
+
+.content-1 {
+	min-height: 40vh;
+	background: #dfe2e5;
+	display: grid;
+	grid-template-columns: 30% 40% 30%;
+}
+
+.text-center {
+	display: flex;
+	justify-content: center;
+}
+
+.middle {
+	position: relative;
+}
+
+.middle:after {
+	content: '';
+	height: 400px;
+	width: 400px;
+	border-radius: 50%;
+	border: 1px solid #ccc;
+	position: absolute;
+	z-index: 50;
+	left: 50%;
+	top: 120px;
+	transform: translateX(-50%);
+	/*background: #dfe2e5;*/
+}
+
+.paul {
+	position: absolute;
+	width: 65%;
+	top: -30px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 100;
+}
+
+.middle h1 {
+	position: absolute;
+	top: 70px;
+	left: 0px;
+	font-size: 12rem;
+	color: #c9132c;
+	font-weight: 700;
+	z-index: 120;
+	font-family: Trebuchet Ms;
+	letter-spacing: -40px;
+}
+
+.circle-bg {
+	background: #ccc;
+	padding: .3rem;
+	height: 30px;
+	width: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	margin-right: .5rem;
+}
+
+.fav {
+	display: flex;
+	align-items: center;
+}
+
+.character h1 {
+	font-size: 3.2rem;
+	margin: 2.3rem 0rem;
+	line-height: 3rem;
+}
+
+.team {
+	display: flex;
+	align-items: center;
+}
+
+.team img {
+	margin-right: .5rem;
+}
+
+.features {
+	display: flex;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+.feature:first-child {
+	margin-right: 6rem;
+}
+
+.feature p {
+	font-weight: 700;
+}
+
+.feature h2 {
+	font-size: 1.9rem;
+}
+
+.side-content {
+	padding: 0rem 1rem;
+}
+
+.side-content:last-child {
+	padding-left: 4.5rem;
+}
+
+.side-content h3 {
+	font-size: 1rem;
+}
+
+.title {
+	text-align: center;
+}
+
+.game-card {
+	background: #fff;
+	border-radius: 7px;
+	margin-top: 1rem;
+	padding: 1rem;
+}
+
+.game-teams {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.game-team {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.game-team h1 {
+	display: flex;
+	align-items: center;
+}
+
+.date {
+	font-size: .8rem;
+	font-weight: 700;
+}
+
+.date span:last-child {
+	padding-left: .5rem;
+}
+
+.highlights {
+	display: grid;
+	grid-template-columns: 60% 60%;
+	margin-top: 1.3rem;
+	overflow-x: hidden;
+	grid-gap: 0rem 1rem;
+}
+
+.h-card {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: relative;
+	height: 150px;
+	border-radius: 7px;
+}
+
+.h-card-over {
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	width: 100%;
+	height: 100%;
+	border-radius: 7px;
+}
+
+.h-card-content {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+
+.h-card-bottom {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	border-top: 1px solid #fff;
+	padding: .5rem;
+	display: flex;
+}
+
+.h-card-control {
+	
+}
+
+.h-card-title p {
+	font-size: .7rem;
+	padding-left: .5rem;
+}
+
+.content-2 {
+	background: #d0d3d9;
+	padding: 1rem 2rem;
+	min-height: 38vh;
+	position: relative;
+}
+
+.flex-grid {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 2rem;
+}
+
+.flex {
+	width: 30%;
+}
+
+.flex:last-child {
+	padding-left: 4.5rem;
+}
+
+table {
+	border-collapse: collapse;
+	width: 70%;
+}
+
+th, td {
+	border-bottom: 1px solid #505050;
+	padding: 1rem .5rem;
+}
+
+th {
+	text-transform: uppercase;
+	font-size: .8rem;
+	text-align: left;
+}
+
+td {
+	padding-left: 2rem;
+}
+
+.points {
+	position: absolute;
+	width: 45%;
+	left: 50%;
+	bottom: 2rem;
+	transform: translateX(-50%);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 0rem 3rem;
+	z-index: 150;
+}
+
+.points-card {
+	border-radius: 7px;
+	text-align: center;
+	color: #fff;
+}
+
+.points-title {
+	text-transform: uppercase;
+	font-size: .8rem;
+	font-weight: 700;
+	padding: .5rem 0rem;
+	border-bottom: 1px solid #fff;
+}
+
+.points-body {
+	padding: 1.2rem 1rem 2rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.points-body h2 {
+	font-size: 2.5rem;
+}
+
+.points-body h2 span {
+	font-size: .8rem;
+}
+
+.points-card:first-child,
+.points-card:last-child {
+	background: #144187;
+}
+
+.points-card:nth-child(2) {
+	background: #071629;
+}

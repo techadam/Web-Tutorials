@@ -1,0 +1,134 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style-type: none;
+	font-family: 'Hk Grotesk Regular', serif;
+}
+
+.hero {
+	height: 100vh;
+	background-image: url('../img/bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	color: #fff;
+}
+
+header {
+	width: 90%;
+	margin: auto;
+	padding: 2rem 0rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu-toggle span {
+	font-size: 1.8rem;
+	color: #cad51c;
+}
+
+header ul {
+	display: flex;
+}
+
+header li {
+	margin: 0 1rem;
+}
+
+header a {
+	color: #fff;
+}
+
+.main-color {
+	color: #cad51c;
+}
+
+.image img {
+	transform: scale(2);
+}
+
+.content {
+	width: 90%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	margin-top: 3.5rem;
+}
+
+.title h1 {
+	font-size: 5rem;
+}
+
+.price {
+	margin-top: 5rem;
+}
+
+.price h3 {
+	color: #cad51c;
+	font-size: 2.5rem;
+} 
+
+.description {
+	padding: 0rem 1rem;
+}
+
+.description p {
+	line-height: 1.6rem;
+	text-align: justify;
+}
+
+.variants {
+	display: flex;
+	margin: 3rem 0rem;
+}
+
+.var-circle {
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	margin-right: .6rem;
+	padding: 2px;
+}
+
+.circle {
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+}
+
+.var-circle.selected {
+	border: 1px solid #cad51c;
+}
+
+.var-circle.selected .circle {
+	background: #cad51c;
+}
+
+.circle.red {
+	background: tomato;
+}
+
+.circle.blue {
+	background: #00ccff;
+}
+
+.circle.pink {
+	background: pink;
+}
+
+.button button {
+	padding: 1rem 3rem;
+	background: #cad51c;
+	border-radius: 30px;
+	border: 1px solid #cad51c;
+	font-weight: bold;
+	font-size: .95rem;
+}
+
+.button button.favorite {
+	background: #fff;
+	color: #cad51c;
+	border: 1px solid #fff;
+}
+
