@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="main">
+		<nav>
+			<h2>navea</h2>
+
+			<ul>
+				<li><a href="">About Us</a></li>
+				<li><a href="">Blog</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+		</nav>
+
+		<div class="grid">
+			<div class="img-wrapper">
+				<img src="img/plant.png" width="60%" alt="">
+			</div>
+			<div class="content">
+				<div class="content-overlay"></div>
+				
+				<small>PLANTS</small>
+				<h1>Fekja - Monstera</h1>
+
+				<p>FEJKA artificial potted plants that don’t require a green thumb. Perfect when you have better things to do than water plants and tidy up dead leaves. You’ll have everyone fooled because they look so real</p>
+
+				<div class="action-btn">
+					<a href="">Get yours now</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="features">
+			<div></div>
+			<div class="feature-single">
+				<h3>105<small>CM</small></h3>
+				<small>LENGTH</small>
+				<div>
+					<a href="">Key features</a>
+				</div>
+			</div>
+			<div class="feature-single">
+				<h3>45<small>CM</small></h3>
+				<small>DIAMETER</small>
+				<div>
+					<a href="">Key features</a>
+				</div>
+			</div>
+			<div class="feature-single">
+				<h3>2.4<small>KG</small></h3>
+				<small>WEIGHT</small>
+				<div>
+					<a href="">Key features</a>
+				</div>
+			</div>
+			<div class="feature-single">
+				<b>Explore</b>
+			</div>
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="menu">
+			<span class="ti-menu off" onclick="openNav()"></span>
+			<span class="ti-close on" onclick="closeNav()"></span>
+		</div>
+
+		<div class="socials">
+			<span class="ti-facebook"></span>
+			<span class="ti-twitter"></span>
+			<span class="ti-linkedin"></span>
+		</div>
+
+		<div>
+			<span class="ti-share"></span>
+		</div>
+	</div>
+
+	<div class="slidein-menu">
+		<div class="slidein-content">
+			<div class="menu-wrapper">
+				<ul>
+					<li><a href="">About Us</a></li>
+					<li><a href="">Blog</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="menu-footer">
+			<div class="footer-item">
+				<h3>Contact</h3>
+				<p>Rhode Island, Providence, United States</p>
+			</div>
+			<div class="footer-item">
+				<h3>About</h3>
+				<p>We are a team of dedicated people who are passionate about their work</p>
+			</div>
+			<div class="footer-item">
+				<h3>Follow us</h3>
+				<p>You can follow us via our social media handles</p>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+
+	<script>
+		const nav = document.querySelector('nav');
+		const img = document.querySelector('img');
+		const overlay = document.querySelector('.content-overlay');
+		const features = document.querySelectorAll('.feature-single');
+
+		const TL = new TimelineMax({paused: true});
+		const animSpeed = 0.75;
+		const animEaseIn = Expo.easIn;
+
+		TL.from(nav, animSpeed, {
+			y: -100,
+			ease: Expo.easIn,
+		}).from(img, animSpeed, {
+			scale: 0,
+		}, 0.8).to(overlay, 1.2, {
+			x: "100%",
+		}, 0.8)
+
+		features.forEach(feature => {
+			TL.from(feature, 0.4, {
+				scale: 0,
+				ease: "bounce",
+				stagger: 0.5,
+			})
+		})
+
+		TL.play();
+
+
+
+		const slideMenu = document.querySelector('.slidein-menu');
+		const lis = document.querySelectorAll('.slidein-menu ul li');
+		const openbtn = document.querySelector('.ti-menu');
+		const closebtn = document.querySelector('.ti-close');
+
+		const openNav = () => {
+			const op = new TimelineMax({paused: true});
+			op.to(slideMenu, 0.5, {
+				x: "0%",
+				ease: "bounce",
+			});
+
+			lis.forEach(li => {
+				op.from(li, 0.5, {
+					scale: 0,
+					ease: Expo.easeIn,
+				})
+			})
+
+			openbtn.style.display = "none"
+			closebtn.style.display = "inline-block"
+
+			op.play();
+
+
+		}
+
+
+		const closeNav = () => {
+			const op = new TimelineMax({paused: true});
+			
+			op.to(slideMenu, 0.74, {
+				x: "110%",
+			});
+
+			openbtn.style.display = "inline-block"
+			closebtn.style.display = "none"
+
+			op.play();
+
+
+		}
+
+
+	</script>
+</body>
+</html>
