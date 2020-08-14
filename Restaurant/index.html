@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Restaurant</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<header>
+		<nav>
+			<div class="brand">
+				<span>X.</span>
+			</div>
+
+			<ul>
+			    <li class="close-menu" onclick="closeMenu"><span class="ti-close"></span></li>
+				<li><a href="">Home</a></li>
+				<li><a href="">Services</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Cuisine</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+			
+			<span class="ti-menu open-menu" onclick="openMenu()"></span>
+		</nav>
+
+		<div class="hero">
+			
+			<div class="content">
+				<div class="hero-desc">
+					<h1>Welcome to Restoran where the food changes with the seasons of food</h1>
+
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+
+					<div class="hero-action">
+						<button>Browse food menu</button>
+					</div>
+
+
+					<div class="food-grid-wrapper">
+						<h3>Our Hot Offer</h3>
+						<div class="food-grid">
+							<div class="food">
+								<div class="food-img" style="background-image: url('img/1.jpeg')"></div>
+								<div class="food-desc">
+									<p>Breakfast</p>
+									<span><b>10 items</b></span>
+								</div>
+							</div>
+							<div class="food">
+								<div class="food-img" style="background-image: url('img/2.jpeg')"></div>
+								<div class="food-desc">
+									<p>Lunch</p>
+									<span><b>12 items</b></span>
+								</div>
+							</div>
+							<div class="food">
+								<div class="food-img" style="background-image: url('img/3.jpeg')"></div>
+								<div class="food-desc">
+									<p>Dinner</p>
+									<span><b>23 items</b></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero-img" style="background-image: url('img/1.jpeg');"></div>
+
+		</div>
+	</header>
+	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.min.js"></script>
+	<script src="hover.js"></script>
+	
+	<script>
+        const menu = document.querySelector('nav ul')
+        const closebtn = document.querySelector('.close-menu')
+        
+        function openMenu() {
+            menu.style.left = "0%"
+        }
+        
+        function closeMenu() {
+            menu.style.left = "-100%"
+            closebtn.style.display = "none";
+        }
+        
+        
+        const foodItems = document.querySelectorAll('.food');
+        
+        const tl = new TimelineMax();
+        
+        tl.from('.hero-desc', 1.25, {
+            x: "-1000px",
+            ease: Expo.easeOut,
+        })
+        .from('.hero-desc p', 0.33, {
+            opacity: 0,
+        })
+        .from('.hero-desc button', 0.33, {
+            opacity: 0,
+        })
+        .from('.food-grid-wrapper h3', 0.33, {
+            opacity: 0,
+        })
+        
+        foodItems.forEach(food => {
+            tl.from(food, 0.55, {
+                y: "500px",
+                ease: Expo.easeOut,
+            })
+        })
+        
+        tl.play();
+        
+        
+        //Hover Effect for hero image
+        
+        new hoverEffect({
+            parent: document.querySelector('.hero-img'),
+            intensity: 0.3,
+            image1: './img/1.jpeg',
+            image2: './img/3.jpeg',
+            displacementImage: './img/heightMap.png',
+        })
+    </script>
+	
+</body>
+</html>
